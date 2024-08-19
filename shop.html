@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>抗疫資訊網</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-4.0.0.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="image/x-con" href="./img/logo-1.png">
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light n-bg">
+    <a class="navbar-brand" href="index.html">
+    	<img src="./img/logo-2.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    	<ul class="navbar-nav ml-auto">
+    		<li class="nav-item">
+    			<a class="btn btn-info c-logo" href="#shopcar">
+    				<img src="./img/shopcar.png">
+    			</a>
+    		</li>
+    	</ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-success fixed-top h2 font-weight-bold text-center c-alert" role="alert">
+                已加入購物車
+            </div>
+        </div>
+    </div>
+</div>
+<div class="shopcar" id="shopcar" onclick="leave()"></div>
+
+<div class="container">
+    <div class="row c-main">
+        <div class="col-12">
+            <h2 class="font-weight-bold">購物車清單</h2>
+            <h2 class="font-weight-bold">以加入購物車之商品</h4>
+            <hr>
+            <div class="row c-flow">
+                <div class="col-12">
+                    <div class="row align-items-center c-box" id="shop-1">
+                        <div class="col-11">
+                            
+                        </div>
+                        <div class="col-1 text-danger text-right c-leave leave-1">
+                            X
+                        </div>
+                        <div class="col-md-3 col-12 c-img">
+                           <img src="./img/m-img1.jpg">
+                        </div>
+                        <h5 class="col-md-3 col-6">
+                            醫療口罩
+                        </h5>
+                        <h5 class="col-md-6 col-6">
+                            <p class="mt-4" style="white-space: nowrap;">NT.<input id="txtTotal" type="text" class="s-text font-weight-bold text-light h5" value="0"></p>
+                        </h5>
+                    </div>
+                    <div class="row align-items-center c-box" id="shop-2">
+                        <div class="col-11">
+                            
+                        </div>
+                        <div class="col-1 text-danger text-right c-leave leave-2">
+                            X
+                        </div>
+                        <div class="col-md-3 col-12 c-img">
+                           <img src="./img/m-img2.jpg">
+                        </div>
+                        <h5 class="col-md-3 col-6">
+                            N95口罩
+                        </h5>
+                        <h5 class="col-md-6 col-6">
+                            <p class="mt-4" style="white-space:nowrap;">NT.<input id="txtTotal2" type="text" class="s-text font-weight-bold text-light h5" value="0"></p>
+                        </h5>
+                    </div>
+                    <div class="row align-items-center c-box" id="shop-3">
+                        <div class="col-11">
+                            
+                        </div>
+                        <div class="col-1 text-danger text-right c-leave leave-3">
+                            X
+                        </div>
+                        <div class="col-md-3 col-12 c-img">
+                           <img src="./img/m-img3.jpg">
+                        </div>
+                        <h5 class="col-md-3 col-6">
+                            衛生紙
+                        </h5>
+                        <h5 class="col-md-6 col-6">
+                            <p class="mt-4" style="white-space: nowrap;">NT.<input id="txtTotal3" type="text" class="s-text font-weight-bold text-light h5" value="0"></p>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 c-btn">
+                    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#formModal2">
+                        結帳
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="s-bg">
+    <span id="shop"></span>
+    <div class="container-fluid">
+        <div class="row s-padding">
+            <div class="col-12 text-center">
+                <h2>防疫採購</h2>
+                <h2>Shop</h2>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row s-box">
+                            <div class="col-md-6 sh-img">
+                                <img src="./img/m-img1.jpg">
+                            </div>
+                            <div class="col-md-6 mt-5">
+                                <h4 class="font-weight-bold">醫療口罩</h4>
+                                <p>經過衛生福利部檢驗合格許可，為一般醫療用，有呼吸道症狀，或進入密閉場所請配戴。</p>
+                                <h3 class="font-weight-bold text-primary">NT.300/盒</h3>
+                                <input id="txtPrice" class="s-text" type="hidden" value="300">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input id="txtAmount" type="text" type="hidden" class="num" placeholder="請輸入數量">
+                                <button class="btn btn-outline-info btn-block shop shop-1 mt-3">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row s-box">
+                            <div class="col-md-6 sh-img">
+                                <img src="./img/m-img2.jpg">
+                            </div>
+                            <div class="col-md-6 mt-5">
+                                <h4 class="font-weight-bold">N95口罩</h4>
+                                <p>經過衛生福利部檢驗合格許可，為第一線醫護人員用，ㄧ般民眾不適合配戴。</p>
+                                <h3 class="font-weight-bold text-primary">NT.500/盒</h3>
+                                <input id="txtPrice2" class="s-text" type="hidden" value="500">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input id="txtAmount2" type="text" type="hidden" class="num" placeholder="請輸入數量">
+                                <button class="btn btn-outline-info btn-block shop shop-2 mt-3">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row s-box">
+                            <div class="col-md-6 sh-img">
+                                <img src="./img/m-img3.jpg">
+                            </div>
+                            <div class="col-md-6 mt-5">
+                                <h4 class="font-weight-bold">醫療口罩</h4>
+                                <p>經過衛生福利部檢驗合格許可，為一般醫療用，有呼吸道症狀，或進入密閉場所請配戴。</p>
+                                <h3 class="font-weight-bold text-primary">NT.200/袋</h3>
+                                <input id="txtPrice3" class="s-text" type="hidden" value="200">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input id="txtAmount3" type="text" type="hidden" class="num" placeholder="請輸入數量">
+                                <button class="btn btn-outline-info btn-block shop shop-3 mt-3">加入購物車</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal" tabindex="-1" role="dialog" id="formModal2">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-image: -webkit-linear-gradient(0deg, #11adfe 0%, #1159fe 100%);">
+                <h4 class="modal-title text-light">結帳資料</h4>
+                <button class="close text-light" data-dismiss="modal" role="button" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body m-margin">
+                <form action="index.html" method="post" id="form2">
+                    <div class="form-group">
+                        <label>姓名</label>
+                        <input class="form-control" type="text" required placeholder="請輸入收件人姓名">
+                    </div>
+                    <div class="form-group">
+                        <label>電話</label>
+                        <input class="form-control" type="text" required placeholder="請輸入電話號碼">
+                    </div>
+                    <div class="form-group">
+                        <label>地址</label>
+                        <input class="form-control" type="text" required placeholder="請輸入收件人地址">
+                    </div>
+                    <div class="form-group">
+                        <label>帳號</label>
+                        <input class="form-control" type="email" required placeholder="請輸入電子信箱帳號">
+                    </div>
+                    <div class="form-group">
+                        <label>付款方式</label>
+                        <select class="form-control" id="exampleControlsSelect1">
+                            <option>ATN轉帳</option>
+                            <option>信用卡</option>
+                            <option>超商取貨</option>
+                            <option>宅配到府</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-5">
+                        <center><input class="m-btn text-light" type="submit" value="結帳"></center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <a href="index.html">
+                    <img src="./img/logo-3.png">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-12 f-text text-center">
+                <h2 class="text-light">快速瀏覽</h2>
+                <a class="nav-link" href="index.html#about">
+                    <p>關於我們</p>
+                </a>
+                <a class="nav-link" href="index.html#about">
+                    <p>最新消息</p>
+                </a>
+                <a class="nav-link" href="index.html#about">
+                    <p>商品訂購</p>
+                </a>
+                <a class="nav-link" href="index.html#about">
+                    <p>常見問題</p>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-12 text-light">
+                <h2>聯絡訊息</h2>
+                <p>客服專線：02-12345678</p>
+                <p>電子信箱：health@abc.com</p>
+                <p>Line官方帳號：health@great</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap-4.0.0.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

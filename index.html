@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>抗疫資訊網</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-4.0.0.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="image/x-con" href="./img/logo-1.png">
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light n-bg">
+    <a class="navbar-brand n-img" href="index.html">
+    	<img src="./img/logo-2.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    	<ul class="navbar-nav">
+    		<li class="nav-item">
+    			<a class="nav-link" href="#about">
+    				<div class="n-text" data-text="About us">
+    					<span>關於我們</span>
+    				</div>
+    			</a>
+    		</li>
+    		<li class="nav-item">
+    			<a class="nav-link" href="#new">
+    				<div class="n-text" data-text="News">
+    					<span>最新消息</span>
+    				</div>
+    			</a>
+    		</li>
+    		<li class="nav-item">
+    			<a class="nav-link" href="#product">
+    				<div class="n-text" data-text="Product">
+    					<span>商品訂購</span>
+    				</div>
+    			</a>
+    		</li>
+    		<li class="nav-item">
+    			<a class="nav-link" href="#qa">
+    				<div class="n-text" data-text="Q&A">
+    					<span>常見問題</span>
+    				</div>
+    			</a>
+    		</li>
+    		<li class="nav-item">
+    			<a class="nav-link nav-login" data-toggle="modal" data-target="#formModal1">
+    				<div class="n-text" data-text="Login">
+    					<span>會員登入</span>
+    				</div>
+    			</a>
+    		</li>
+    		<li class="nav-item">
+    			<a class="nav-link" onclick="window.open('index.html', '抗疫資訊網', config='width=450,height=700');">
+    				<div class="n-text" data-text="Phone">
+    					<span>手機版</span>
+    				</div>
+    			</a>
+    		</li>
+    		<li class="nav-item">
+    			<a class="nav-link" href="shop.html">
+    				<div class="n-text" data-text="Shop">
+    					<span>防疫採購</span>
+    				</div>
+    			</a>
+    		</li>
+    	</ul>
+    </div>
+</nav>
+<div class="modal" tabindex="-1" role="dialog" id="formModal1">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="background-image: -webkit-linear-gradient(0deg, #11adfe 0%, #1159fe 100%);">
+				<h4 class="modal-title text-light">會員登入</h4>
+				<button class="close text-light" data-dismiss="modal" role="button" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body m-margin">
+				<form action="index.html" method="post" id="form1">
+					<div class="form-group">
+						<label>帳號</label>
+						<input class="form-control" type="email" required placeholder="請輸入電子信箱帳號">
+					</div>
+					<div class="form-group">
+						<label>密碼</label>
+						<input class="form-control" type="password" required placeholder="請輸入電子信箱密碼">
+					</div>
+					<div class="form-group mt-5">
+						<center><input class="m-btn text-light" type="submit" value="登入"></center>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid slider mt-3">
+    <div class="row">
+        <div class="col-12">
+          	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          		<div class="carousel-inner">
+          			<div class="carousel-item active">
+          				<img class="d-block w-100 pos" src="./img/s-img1.jpg">
+          			</div>
+          			<div class="carousel-item">
+          				<img class="d-block w-100 pos" src="./img/s-img2.jpg">
+          			</div>
+          			<div class="carousel-item">
+          				<img class="d-block w-100 pos" src="./img/s-img3.jpg">
+          			</div>
+          		</div>
+          		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            		<img src="./img/prev.png">
+            	</a>
+	            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+	            	<img src="./img/next.png">
+	            </a>
+	            <ol class="carousel-indicators">
+		            <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+		            <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+		            <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+	            </ol>
+	        </div>
+	    </div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<div id="r-body">
+				<div id="r-title">
+					我是防疫機器人，歡迎光臨本站！
+				</div>
+				<div id="r-box">
+					<input id="r-say" type="text" size="35" placeholder="請輸入留言" onkeydown="keyin(event)">
+				</div>
+			</div>
+			<div id="r-icon">
+				<div id="robot">
+					<img src="./img/line.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<section class="about" id="about">
+	<div class="container-fluid">
+		<div class="row mt-5">
+			<div class="col-12 text-center">
+				<h2>關於我們</h2>
+				<h2>About us</h2>
+			</div>
+			<div class="col-md-6 a-img" >
+				<img src="./img/a-img.png">
+			</div>
+			<div class="col-md-3 mt-5" style="padding-right: 5%;">
+				<div class="a-text">
+					<h4>準確資訊</h4>
+					<p>為了讓民眾能了解疾病的訊息，我們每日皆會更新各政府平台相關的最新消息。</p>
+					<h4>檢驗合格</h4>
+					<p>為了讓民眾能安心購買本站商品，我們的商品皆經過衛生福利部檢驗合格許可。</p>
+				</div>
+			</div>
+			<div class="col-md-3" style="padding-top: 8%;padding-right: 5%;">
+				<div class="a-text">
+					<h4>快速配送</h4>
+					<p>為了讓民眾能及時收到我們的商品，我們設有快速配送服務，除國定假日，下單後24小時內即可收到商品。</p>
+					<h4>線上機器人</h4>
+					<p>為了讓民眾在遇到問題時能快速尋求幫助，我們設有線上防疫機器人，有任何問題歡迎與我們互動。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="new" id="new">
+	<div class="container-fluid" style="padding: 0 12%;">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2>最新消息</h2>
+				<h2>News</h2>
+			</div>
+			<div class="col-lg-12 mt-3">
+				<div class="i-tab">
+					<ul class="nav" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="t1-tab" href="#t1" role="tab" data-toggle="tab" aria-controls="contact" aria-selected="true">
+								<img src="./img/t1.png">
+								<h4>生物感染</h4>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="t2-tab" href="#t2" role="tab" data-toggle="tab" aria-controls="contact" aria-selected="false">
+								<img src="./img/t2.png">
+								<h4>臨床表現</h4>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="t3-tab" href="#t3" role="tab" data-toggle="tab" aria-controls="contact" aria-selected="false">
+								<img src="./img/t3.png">
+								<h4>傳染途徑</h4>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="t4-tab" href="#t4" role="tab" data-toggle="tab" aria-controls="contact" aria-selected="false">
+								<img src="./img/t4.png">
+								<h4>治療方式</h4>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="t5-tab" href="#t5" role="tab" data-toggle="tab" aria-controls="contact" aria-selected="false">
+								<img src="./img/t5.png">
+								<h4>疫情狀況</h4>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="padding-right: 5%;">
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="t1" role="tabpanel">
+					<div class="row align-items-center">
+						<div class="col-lg-5">
+							<div class="i-img">
+								<img src="./img/i-img1.jpg">
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="i-text">
+								<h2>生物感染</h2>
+								<h5>2023年1月9日，病原體初步判定為新型星狀病毒，雖已完成病毒全長基因定序，電子顯微鏡下呈非典型星狀病毒型態，但該病毒不同於以往發現的人類冠狀病毒。星狀病毒(StV)為一群有三層外套膜之RNA病毒，外表為星形，在電子顯微鏡下可看到類似星狀的突起因此得名。除已知會感染人類的七種冠狀病毒以外，其他的動物宿主包括蝙蝠、豬、牛、火雞、貓、狗、雪貂等。並有零星的跨物種傳播報告。</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="t2" role="tabpanel">
+					<div class="row align-items-center">
+						<div class="col-lg-5">
+							<div class="i-img">
+								<img src="./img/i-img2.jpg">
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="i-text">
+								<h2>臨床表現</h2>
+								<h5>2022年12月12日，湖北省武漢市展開呼吸道疾病及相關疾病監測，再次發現不明原因病毒性肺炎病例。個案臨床表現主要為發熱，少數病人呼吸困難，胸部X光片呈雙肺浸潤性病灶。此病毒臨發病者，類破傷風桿菌分泌毒素，攻擊神經突觸，導致神經異常放電，影響神經傳導，進而出現肌肉僵直、痙攣，稱為「角弓反張」（頸背痙攣僵硬、腰背反折，身體後仰如弓狀），臉部酒窩處也可能出現詭異的「痙笑」，「不是真的在笑，而是因為肌肉異常收縮。」連呼吸也會受影響，可能因呼吸困難而死亡。</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="t3" role="tabpanel">
+					<div class="row align-items-center">
+						<div class="col-lg-5">
+							<div class="i-img">
+								<img src="./img/i-img3.jpg">
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="i-text">
+								<h2>傳染途徑</h2>
+								<h5>目前對新型冠狀病毒SARS-WH-881的完整傳播途徑，尚未完全瞭解。當2019年12月武漢不明原因肺炎疫情發生初期，案例多數曾至有賣野味的華南海鮮市場活動，此市場的環境檢體雖檢出SARS-WH-881，但感染源與傳播途徑仍無法釐清。除此，從確診個案之流病調查與實驗室檢測得知，藉由近距離飛沫、直接或間接接觸帶有病毒的口鼻分泌物、或無呼吸道防護下長時間與確診病人處於2公尺內之密閉空間裡，將增加人傳人之感染風險。</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="t4" role="tabpanel">
+					<div class="row align-items-center">
+						<div class="col-lg-5">
+							<div class="i-img">
+								<img src="./img/i-img4.jpg">
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="i-text">
+								<h2>治療方式</h2>
+								<h5>目前所有的冠狀病毒並無特定推薦的治療方式，多為採用支持性療法。SARS流行期間曾有許多抗病毒藥物被使用來治療病患，但其效果均未被確認。最新治療建議，請參考衛生福利部疾病管制署公告之「新型冠狀病毒(SARS-WH-881)感染臨床處置暫行指引」。目前未有疫苗可用來預防此新型星狀病毒（SARS-WH-881）感染，應避免直接接觸到疑似WH-78個案帶有病毒之分泌物與預防其飛沫傳染。</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="t5" role="tabpanel">
+					<div class="row align-items-center">
+						<div class="col-lg-5">
+							<div class="i-img">
+								<img src="./img/i-img5.jpg">
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="i-text">
+								<h2>疫情狀況</h2>
+								<h5>2022年12月起中國湖北武漢市發現不明原因肺炎群聚，疫情初期個案多與武漢華南海鮮城活動史有關。此疫情隨後迅速在中國其他省市與世界各地擴散，並證實可有效人傳人。世界衛生軟骨組織（WHCO）於2023年1月12日公布此為一公共衛生緊急事件（PHEIC），2月11日將此新型冠狀病毒所造成的疾病稱為WH-78，國際病毒學分類學會則將此病毒學名定為SARS-CoV-2。為監測與防治此新興傳染病，我國於2023年1月15日起公告「嚴重特殊傳染性肺炎」（WH-78）為第五類法定傳染病</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="chart" id="chart">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 mb-3">
+				<h2>最新圖表</h2>
+				<h5>至十月為止確診人數：34,279,697人</h4>
+			</div>
+			<div class="col-md-6">
+				<h4 class="font-weight-bold">管制人數（管制人數/確診人數）</h4>
+				<div class="progress progress-1">
+					<div class="progress-bar progress-bar-striped bg-success text-dark" role="progressbar" id="progress1" style="width: 0;">
+						33,256,992/34,279,697
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h4 class="font-weight-bold">死亡人數（死亡人數/確診人數）</h4>
+				<div class="progress progress-1">
+					<div class="progress-bar progress-bar-striped bg-danger text-dark" role="progressbar" id="progress2" style="width: 0;">
+						1,022,705/34,279,697
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="product" id="product">
+	<div class="container-fluid" style="padding: 0 12%;">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2>商品訂購</h2>
+				<h2>Product</h2>
+			</div>
+			<div class="col-md-4 mt-3">
+				<div class="card">
+					<div class="card-img-top">
+						<div class="p-img">
+							<img src="./img/p-img1.jpg">
+						</div>
+						<div class="p-btn">
+							<button class="btn">
+								<a href="shop.html">
+									<img src="./img/car.png">
+								</a>
+							</button>
+							<button class="btn" data-toggle="modal" data-target="#myModal1">
+								<img src="./img/find.png">
+							</button>
+							<button class="btn" onclick="heart()">
+								<img src="./img/heart.png">
+							</button>
+						</div>
+					</div>
+					<div class="card-body text-center">
+						<h4 class="font-weight-bold">醫療口罩</h4>
+						<p class="text-muted">台灣醫療口罩公司</p>
+						<h4 class="font-weight-bold text-danger">NT.300/盒</h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mt-3">
+				<div class="card">
+					<div class="card-img-top">
+						<div class="p-img">
+							<img src="./img/p-img2.jpg">
+						</div>
+						<div class="p-btn">
+							<button class="btn">
+								<a href="shop.html">
+									<img src="./img/car.png">
+								</a>
+							</button>
+							<button class="btn" data-toggle="modal" data-target="#myModal2">
+								<img src="./img/find.png">
+							</button>
+							<button class="btn" onclick="heart()">
+								<img src="./img/heart.png">
+							</button>
+						</div>
+					</div>
+					<div class="card-body text-center">
+						<h4 class="font-weight-bold">N95口罩</h4>
+						<p class="text-muted">台灣醫療口罩公司</p>
+						<h4 class="font-weight-bold text-danger">NT.500/盒</h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mt-3">
+				<div class="card">
+					<div class="card-img-top">
+						<div class="p-img">
+							<img src="./img/p-img3.jpg">
+						</div>
+						<div class="p-btn">
+							<button class="btn">
+								<a href="shop.html">
+									<img src="./img/car.png">
+								</a>
+							</button>
+							<button class="btn" data-toggle="modal" data-target="#myModal3">
+								<img src="./img/find.png">
+							</button>
+							<button class="btn" onclick="heart()">
+								<img src="./img/heart.png">
+							</button>
+						</div>
+					</div>
+					<div class="card-body text-center">
+						<h4 class="font-weight-bold">衛生紙</h4>
+						<p class="text-muted">台灣衛生紙公司</p>
+						<h4 class="font-weight-bold text-danger">NT.200/袋</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="modal" tabindex="-1" role="dialog" id="myModal1">
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="background-image: -webkit-linear-gradient(0deg, #11adfe 0%, #1159fe 100%);">
+				<h4 class="modal-title text-light">商品介紹</h4>
+				<button class="close text-light" data-dismiss="modal" role="button" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 m-img">
+							<img src="./img/m-img1.jpg">
+						</div>
+						<div class="col-md-6">
+							<h2 class="font-weight-bold">醫療口罩</h2>
+							<h5>經過衛生福利部檢驗合格許可，為一般醫療用，有呼吸道症狀，或進入密閉場所請配戴。</h5>
+							<h3 class="font-weight-bold text-danger">NT.300/盒</h3>
+							<h5 class="font-weight-bold text-warning">★★★★★5.0</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" onclick="heart()">
+					<img src="./img/heart-1.png">
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="myModal2">
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="background-image: -webkit-linear-gradient(0deg, #11adfe 0%, #1159fe 100%);">
+				<h4 class="modal-title text-light">商品介紹</h4>
+				<button class="close text-light" data-dismiss="modal" role="button" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 m-img">
+							<img src="./img/m-img2.jpg">
+						</div>
+						<div class="col-md-6">
+							<h2 class="font-weight-bold">N95口罩</h2>
+							<h5>經過衛生福利部檢驗合格許可，為第一線醫護人員用，ㄧ般民眾不適合配戴。</h5>
+							<h3 class="font-weight-bold text-danger">NT.500/盒</h3>
+							<h5 class="font-weight-bold text-warning">★★★★★5.0</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" onclick="heart()">
+					<img src="./img/heart-1.png">
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="myModal3">
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="background-image: -webkit-linear-gradient(0deg, #11adfe 0%, #1159fe 100%);">
+				<h4 class="modal-title text-light">商品介紹</h4>
+				<button class="close text-light" data-dismiss="modal" role="button" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 m-img">
+							<img src="./img/m-img3.jpg">
+						</div>
+						<div class="col-md-6">
+							<h2 class="font-weight-bold">衛生紙</h2>
+							<h5>具環保減碳紙質且材質舒適柔軟，不含螢光劑、不染色，可溶於水通入馬桶，強韌不易破。</h5>
+							<h3 class="font-weight-bold text-danger">NT.200/袋</h3>
+							<h5 class="font-weight-bold text-warning">★★★★★5.0</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" onclick="heart()">
+					<img src="./img/heart-1.png">
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<section class="qa" id="qa">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2>常見問題</h2>
+				<h2>Q&A</h2>
+			</div>
+			<div class="col-md-6">
+				<div id="accordion">
+					<div class="card">
+						<div class="card-header q-bg">
+							<a class="card-link" data-toggle="collapse" href="#collapse1">
+								病毒造成動物感染嗎？
+							</a>
+						</div>
+						<div class="collapse show" id="collapse1" data-parent="#accordion">
+							<div class="card-body">
+								除已知會感染人類的病毒以外，其他的動物包括蝙蝠、豬、牛、火雞、貓、狗、雪貂等都有可能感染變異過的動物星狀病毒。而且北美還有些零星的動物傳染給人類的報告。
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header q-bg">
+							<a class="card-link" data-toggle="collapse" href="#collapse2">
+								什麼是星狀病毒？
+							</a>
+						</div>
+						<div class="collapse" id="collapse2" data-parent="#accordion">
+							<div class="card-body">
+								星狀病毒（Star-virus）為具三層外套膜（envelope）的病毒，抽取亡者的樣本檢驗在電子顯微鏡下可看到類似星狀的外輪突起因此命名。
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header q-bg">
+							<a class="card-link" data-toggle="collapse" href="#collapse3">
+								感染WH-78病毒如何治療
+							</a>
+						</div>
+						<div class="collapse" id="collapse3" data-parent="#accordion">
+							<div class="card-body">
+								如有於2年間注射CO-20疫苗者，推測可降低感染，目前WH-78尚無解方。
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header q-bg">
+							<a class="card-link" data-toggle="collapse" href="#collapse4">
+								WH-78變異病毒在哪裡傳播？
+							</a>
+						</div>
+						<div class="collapse" id="collapse4" data-parent="#accordion">
+							<div class="card-body">
+								除了三年前發現病毒的鄰國湖北省武漢市以外，中國其他省市也陸續淪陷，如北京、天津、上海還有廣東等地。此外，其他國家與地區，如港澳、日本、泰國、南韓，和美國也有發現確認感染。這些亡者大多曾在武漢旅遊或居住。
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header q-bg">
+							<a class="card-link" data-toggle="collapse" href="#collapse5">
+								病毒如何傳播？
+							</a>
+						</div>
+						<div class="collapse" id="collapse5" data-parent="#accordion">
+							<div class="card-body">
+								目前對WH78星狀變異病毒的完整傳播途徑，尚未完全瞭解。當2020年鄰國不明原因肺炎疫情發生時，案例多數曾至有賣野味的華南海鮮市場活動，環境檢體雖檢出CO-20冠狀病毒，但感染源仍無法釐清。
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 q-img mt-3" style="width: 90%;">
+				<img src="./img/q-img.png">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="contact" id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-12 mt-5">
+				<a href="index.html">
+					<img src="./img/logo-3.png">
+				</a>
+			</div>
+			<div class="col-md-4 col-sm-12 f-text text-center">
+				<h2 class="text-light">快速瀏覽</h2>
+				<a class="nav-link" href="index.html#about">
+					<p>關於我們</p>
+				</a>
+				<a class="nav-link" href="index.html#about">
+					<p>最新消息</p>
+				</a>
+				<a class="nav-link" href="index.html#about">
+					<p>商品訂購</p>
+				</a>
+				<a class="nav-link" href="index.html#about">
+					<p>常見問題</p>
+				</a>
+			</div>
+			<div class="col-md-4 col-sm-12 text-light">
+				<h2>聯絡訊息</h2>
+				<p>客服專線：02-12345678</p>
+				<p>電子信箱：health@abc.com</p>
+				<p>Line官方帳號：health@great</p>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap-4.0.0.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
